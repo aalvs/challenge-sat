@@ -18,7 +18,7 @@ export class FormComponent implements OnInit {
       cpf: [null,[Validators.required]],
       rg: [null,[Validators.required]],
       dataNascimento: [null,[Validators.required]],
-      sexo: ['Selecionar',[Validators.required]],
+      sexo: ['Masculino',[Validators.required]],
       nomeMae: [null,[Validators.required]],
       nomePai: [null,[Validators.required]],
       endereco: [null,[Validators.required]],
@@ -33,5 +33,6 @@ export class FormComponent implements OnInit {
 
   onSubmit(){
     console.warn(this.formulario.value);
+    this.formulario.reset();
   }
 }

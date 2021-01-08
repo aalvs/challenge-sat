@@ -32,6 +32,7 @@ nav {
 
 .menu li a:hover {
     background-color: var(--c-bg-light);
+    color: var(--sat-blue);
 }
 
 @media (min-width: 320px) and (max-width: 768px) {

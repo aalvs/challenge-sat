@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600;700&display=swap');
+
+:root {
+    --c-white: #ffffff;
+    --c-dark: #1f2429;
+    --c-gray: #88969e;
+    --c-border: #cccccc;
+    --c-error: #ff6669;
+    --c-disabled: #c8c8c8;
+    --c-bg-light: #f9f9f9;
+    --c-bg-disabled: #f2f2f2;
+    --sat-blue: rgb(6, 72, 116);
+    --sat-green: rgb(39, 181, 122);
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--c-bg-light);
+    font-family: 'Asap', sans-serif;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+button, input, select {
+    outline: none;
+}
+
+a, button {
+    cursor: pointer;
+    text-decoration: none;
+}

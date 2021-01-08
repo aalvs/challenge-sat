@@ -18,7 +18,7 @@ export class FormComponent implements OnInit {
       cpf: [null,[Validators.required]],
       rg: [null,[Validators.required]],
       dataNascimento: [null,[Validators.required]],
-      sexo: ['Masculino', 'Feminino',[Validators.required]],
+      sexo: ['Selecionar',[Validators.required]],
       nomeMae: [null,[Validators.required]],
       nomePai: [null,[Validators.required]],
       endereco: [null,[Validators.required]],

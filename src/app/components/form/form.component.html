@@ -53,7 +53,9 @@
                 <select name="sexo" id="sexo"
                 formControlName="sexo"
                 [ngClass]="formulario.get('sexo').invalid && formulario.get('sexo').touched ? 'error':null">
-                    <option></option>
+                    <option value="Selecionar" selected disabled hidden>Selecionar</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
                 </select>
                 <ul *ngIf="formulario.get('sexo').touched">
                     <li *ngIf="formulario.get('sexo').getError('required')" class="alert">Esse campo é obrigatório!</li>

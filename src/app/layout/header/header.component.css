@@ -1,0 +1,41 @@
+header {
+    width: auto;
+    background-color: var(--c-white);
+    padding: 20px;
+    border-bottom: 2px solid var(--sat-green);
+}
+nav {
+    width: 100%;
+    max-width: 1070px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.brand img {
+    width: 110px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.menu li a {
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--c-gray);
+    padding: 4px 8px;
+}
+
+.menu li a:hover {
+    background-color: var(--c-bg-light);
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    header {
+        width: 100%;
+    }
+}

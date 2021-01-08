@@ -107,6 +107,7 @@
                 [ngClass]="formulario.get('email').invalid && formulario.get('email').touched ? 'error':null">
                 <ul *ngIf="formulario.get('email').touched">
                     <li *ngIf="formulario.get('email').getError('required')" class="alert">Esse campo é obrigatório!</li>
+                    <li *ngIf="formulario.get('email').getError('email')" class="alert">Esse email é invalido!</li>
                 </ul>
             </div>
 

@@ -1,0 +1,7 @@
+app-form {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  max-width: 1300px;
+  margin: 0 auto;
+}

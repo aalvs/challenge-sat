@@ -1,0 +1,22 @@
+<div>
+  <table>
+    <thead>
+      <th>id</th>
+      <th>Nome</th>
+      <th>CPF</th>
+      <th>RG</th>
+      <th>Data Nascimento</th>
+      <th>Sexo</th>
+      <th>Email</th>
+      <th>Telefone</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of colabs">
+        <tbody>{{ c.id }}</tbody>
+        <tbody>{{ c.nome }}</tbody>
+        <tbody>{{ c.cpf }}</tbody>
+        <tbody>{{ c.rg }}</tbody>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -40,8 +40,9 @@
         <div class="rowForm">
             <div class="inputGroup">
                 <label for="dataNascimento">Data de Nascimento:</label>
-                <input id="dataNascimento" type="date" placeholder="00/00/0000"
+                <input id="dataNascimento" type="text" placeholder="00/00/0000"
                 formControlName="dataNascimento"
+                [imask]="{mask: dateMask}"
                 [ngClass]="formulario.get('dataNascimento').invalid && formulario.get('dataNascimento').touched ? 'error':null">
                 <ul *ngIf="formulario.get('dataNascimento').touched">
                     <li *ngIf="formulario.get('dataNascimento').getError('required')" class="alert">Esse campo é obrigatório!</li>
@@ -59,42 +60,6 @@
                 </select>
                 <ul *ngIf="formulario.get('sexo').touched">
                     <li *ngIf="formulario.get('sexo').getError('required')" class="alert">Esse campo é obrigatório!</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="rowForm">
-            <div class="inputForm">
-                <label for="nomeMae">Nome da Mãe:</label>
-                <input id="nomeMae" type="text" placeholder="Informe o nome da mãe"
-                formControlName="nomeMae"
-                [ngClass]="formulario.get('nomeMae').invalid && formulario.get('nomeMae').touched ? 'error':null">
-                <ul *ngIf="formulario.get('nomeMae').touched">
-                    <li *ngIf="formulario.get('nomeMae').getError('required')" class="alert">Esse campo é obrigatório!</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="rowForm">
-            <div class="inputForm">
-                <label for="nomePai">Nome do Pai:</label>
-                <input id="nomePai" type="text" placeholder="Informe o nome do pai"
-                formControlName="nomePai"
-                [ngClass]="formulario.get('nomePai').invalid && formulario.get('nomePai').touched ? 'error':null">
-                <ul *ngIf="formulario.get('nomePai').touched">
-                    <li *ngIf="formulario.get('nomePai').getError('required')" class="alert">Esse campo é obrigatório!</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="rowForm">
-            <div class="inputForm">
-                <label for="endereco">Endereço:</label>
-                <input id="endereco" type="text" placeholder="Ex: Av. 24 de Maio, nº 100 - São Paulo"
-                formControlName="endereco"
-                [ngClass]="formulario.get('endereco').invalid && formulario.get('endereco').touched ? 'error':null">
-                <ul *ngIf="formulario.get('endereco').touched">
-                    <li *ngIf="formulario.get('endereco').getError('required')" class="alert">Esse campo é obrigatório!</li>
                 </ul>
             </div>
         </div>
@@ -128,4 +93,7 @@
         [disabled]="formulario.invalid">Cadastrar</button>
         <div class="responseSubmit"></div>
     </form>
+</div>
+<div>
+  <app-table [colabs]="listaColabs"></app-table>
 </div>

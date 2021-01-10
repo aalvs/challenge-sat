@@ -3,9 +3,9 @@
         <h1>Cadastro de colaborador<span>.</span></h1>
         <div class="rowForm">
             <div class="inputForm">
-                <label for="nome">Nome do colaborador:</label>
+                <label for="nome">Nome completo:</label>
                 <input id="nome" type="text" placeholder="Informe o nome do colaborador"
-                formControlName="nome"
+                formControlName="nomeCompleto"
                 [ngClass]="formulario.get('nome').invalid && formulario.get('nome').touched ? 'error':null">
                 <ul *ngIf="formulario.get('nome').touched">
                     <li *ngIf="formulario.get('nome').getError('required')" class="alert">Esse campo é obrigatório!</li>
@@ -26,42 +26,15 @@
             </div>
 
             <div class="inputGroup">
-                <label for="rg">RG:</label>
-                <input id="rg" type="text" placeholder="00.000.000-0"
-                formControlName="rg"
-                [imask]="{mask: rgMask}"
-                [ngClass]="formulario.get('rg').invalid && formulario.get('rg').touched ? 'error':null">
-                <ul *ngIf="formulario.get('rg').touched">
-                    <li *ngIf="formulario.get('rg').getError('required')" class="alert">Esse campo é obrigatório!</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="rowForm">
-            <div class="inputGroup">
-                <label for="dataNascimento">Data de Nascimento:</label>
-                <input id="dataNascimento" type="text" placeholder="00/00/0000"
-                formControlName="dataNascimento"
-                [imask]="{mask: dateMask}"
-                [ngClass]="formulario.get('dataNascimento').invalid && formulario.get('dataNascimento').touched ? 'error':null">
-                <ul *ngIf="formulario.get('dataNascimento').touched">
-                    <li *ngIf="formulario.get('dataNascimento').getError('required')" class="alert">Esse campo é obrigatório!</li>
-                </ul>
-            </div>
-
-            <div class="inputGroup">
-                <label for="sexo">Sexo:</label>
-                <select name="sexo" id="sexo"
-                formControlName="sexo"
-                [ngClass]="formulario.get('sexo').invalid && formulario.get('sexo').touched ? 'error':null">
-                    <option value="Selecionar" selected disabled hidden>Selecionar</option>
-                    <option value="Masculino">Masculino</option>
-                    <option value="Feminino">Feminino</option>
-                </select>
-                <ul *ngIf="formulario.get('sexo').touched">
-                    <li *ngIf="formulario.get('sexo').getError('required')" class="alert">Esse campo é obrigatório!</li>
-                </ul>
-            </div>
+              <label for="dataNascimento">Data de Nascimento:</label>
+              <input id="dataNascimento" type="text" placeholder="00/00/0000"
+              formControlName="dataNascimento"
+              [imask]="{mask: dateMask}"
+              [ngClass]="formulario.get('dataNascimento').invalid && formulario.get('dataNascimento').touched ? 'error':null">
+              <ul *ngIf="formulario.get('dataNascimento').touched">
+                  <li *ngIf="formulario.get('dataNascimento').getError('required')" class="alert">Esse campo é obrigatório!</li>
+              </ul>
+          </div>
         </div>
 
         <div class="rowForm">

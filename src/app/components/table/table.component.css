@@ -1,0 +1,45 @@
+table {
+  width: fit-content;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: var(--c-white);
+  box-shadow: 0 25px 50px rgba(15,42,70,.06);
+}
+
+.wrapForm {
+  margin-top: 40px;
+}
+
+thead {
+  background-color: var(--sat-blue);
+  display: flex;
+  justify-content: space-between;
+}
+thead, th {
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--c-white);
+  padding: 5px 8px;
+}
+
+tbody {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+tbody, td {
+  font-size: 12px;
+  color: var(--c-gray);
+  background-color: var(--c-bg-light);
+  padding: 4px;
+  margin-top: 5px;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  table {
+    width: 100%;
+  }
+}

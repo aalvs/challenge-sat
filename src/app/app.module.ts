@@ -7,15 +7,19 @@ import { FormComponent } from './components/form/form.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { IMaskModule } from 'angular-imask';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { TableComponent } from './components/table/table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
-    HeaderComponent
+    HeaderComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,

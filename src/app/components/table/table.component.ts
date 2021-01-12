@@ -13,11 +13,11 @@ export class TableComponent implements OnInit {
   constructor(private frService: FormResourceService) { }
 
   ngOnInit(): void {
-    this.listar();
+    this.getColaboradores();
   }
 
-  listar() {
-    this.frService.listar().subscribe(dados => this.colaboradores = dados);
+  getColaboradores() {
+    this.frService.list().subscribe(dados => this.colaboradores = dados);
   }
 
 }

@@ -1,27 +1,38 @@
-# Satfront
+<div align='center'>
+<img src=".github/logo.png" width='250'>
+</div>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
+## 🚀 Desafio
 
-## Development server
+Gostaria de te propor o desafio a seguir:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Utilizando banco (de preferência MariaDB/MySQL/PostgreSQL), backend Java e Frontend Angular 2+.
 
-## Code scaffolding
+Aplicação com formulário de entrada com cores e logo da SAT, seguindo o arquivo em anexo, gravando em banco, retornando erro ou sucesso ao usuário. Que campos? Coloca uns legais que imaginar.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Relatório das entradas, tendo as funções de uma Restful API (delete, put, get...).
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+[API Rest Colaboradores](https://challenge-sat-apirest.herokuapp.com/swagger-ui.html#/colaborador-resource)
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# 💻 Tecnologias
 
-## Running end-to-end tests
+<a href='https://angular.io/'>Angular JS</a>
+<br/>
+<a href='https://www.typescriptlang.org/'>TypeScript</a>
+<br/>
+<a href='https://www.w3schools.com/css/'>CSS</a>
+<br/>
+<a href='https://www.npmjs.com/package/angular-imask/'>iMask Angular</a>
+<br/>
+<a href='https://code.visualstudio.com/'>Visual Studio Code</a>
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+# 📝 Sobre o projeto
 
-## Further help
+Este é um projeto para um processo seletivo. Seu principal objetivo é facilitar a avaliação dos recrutadores.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+---
+
+O aprendizado é contínuo e o próximo nível nunca será o último 🚀 by [aalvs](https://app.rocketseat.com.br/me/aalvs).

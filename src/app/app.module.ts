@@ -9,6 +9,7 @@ import { IMaskModule } from 'angular-imask';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TableComponent } from './components/table/table.component';
+import { FormResourceService } from './shared/services/form-resource.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { TableComponent } from './components/table/table.component';
     ReactiveFormsModule,
     IMaskModule
   ],
-  providers: [],
+  providers: [ FormResourceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

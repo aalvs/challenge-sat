@@ -1,3 +1,4 @@
+import { FormResourceService } from './../../shared/services/form-resource.service';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -7,11 +8,16 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TableComponent implements OnInit {
 
-  @Input() colabs: any;
+  colaboradores: Array<any>;
 
-  constructor() { }
+  constructor(private frService: FormResourceService) { }
 
   ngOnInit(): void {
+    this.listar();
+  }
+
+  listar() {
+    this.frService.listar().subscribe(dados => this.colaboradores = dados);
   }
 
 }

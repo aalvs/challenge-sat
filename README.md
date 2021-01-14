@@ -25,6 +25,8 @@ Relatório das entradas, tendo as funções de uma Restful API (delete, put, get
 <br/>
 <a href='https://www.w3schools.com/css/'>CSS</a>
 <br/>
+<a href='https://rxjs-dev.firebaseapp.com/guide/observable'>RxJS</a>
+<br/>
 <a href='https://www.npmjs.com/package/angular-imask/'>iMask Angular</a>
 <br/>
 <a href='https://code.visualstudio.com/'>Visual Studio Code</a>

@@ -1,72 +1,71 @@
-<div class="wrapForm">
-    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
-        <h1>Cadastro de colaborador<span>.</span></h1>
-        <div class="rowForm">
-            <div class="inputForm">
-                <label for="nome">Nome completo:</label>
-                <input id="nome" type="text" placeholder="Informe o nome do colaborador"
-                formControlName="nomeCompleto"
-                [ngClass]="formulario.get('nome').invalid && formulario.get('nome').touched ? 'error':null">
-                <ul *ngIf="formulario.get('nome').touched">
-                    <li *ngIf="formulario.get('nome').getError('required')" class="alert">Esse campo é obrigatório!</li>
-                </ul>
-            </div>
-        </div>
 
-        <div class="rowForm">
-            <div class="inputGroup">
-                <label for="cpf">CPF:</label>
-                <input id="cpf" type="text" placeholder="000.000.000-00"
-                formControlName="cpf"
-                [imask]="{mask: cpfMask}"
-                [ngClass]="formulario.get('cpf').invalid && formulario.get('cpf').touched ? 'error':null">
-                <ul *ngIf="formulario.get('cpf').touched">
-                    <li *ngIf="formulario.get('cpf').getError('required')" class="alert">Esse campo é obrigatório!</li>
-                </ul>
-            </div>
+<form [formGroup]="formulario">
+  <h1>Cadastro de colaborador<span>.</span></h1>
+  <div class="rowForm">
+    <div class="inputForm">
+      <label for="nome">Nome completo:</label>
+      <input id="nome" type="text" placeholder="Informe o nome do colaborador" name="nome_completo"
+      formControlName="nome_completo"
+      [ngClass]="formulario.get('nome_completo').invalid && formulario.get('nome_completo').touched ? 'error':null">
+      <ul *ngIf="formulario.get('nome_completo').touched">
+        <li *ngIf="formulario.get('nome_completo').getError('required')" class="alert">Esse campo é obrigatório!</li>
+      </ul>
+    </div>
+  </div>
 
-            <div class="inputGroup">
-              <label for="dataNascimento">Data de Nascimento:</label>
-              <input id="dataNascimento" type="text" placeholder="00/00/0000"
-              formControlName="dataNascimento"
-              [imask]="{mask: dateMask}"
-              [ngClass]="formulario.get('dataNascimento').invalid && formulario.get('dataNascimento').touched ? 'error':null">
-              <ul *ngIf="formulario.get('dataNascimento').touched">
-                  <li *ngIf="formulario.get('dataNascimento').getError('required')" class="alert">Esse campo é obrigatório!</li>
-              </ul>
-          </div>
-        </div>
+  <div class="rowForm">
+    <div class="inputGroup">
+      <label for="cpf">CPF:</label>
+      <input id="cpf" type="text" placeholder="000.000.000-00" name="cpf"
+      formControlName="cpf"
+      [imask]="{mask: cpfMask}"
+      [ngClass]="formulario.get('cpf').invalid && formulario.get('cpf').touched ? 'error':null">
+      <ul *ngIf="formulario.get('cpf').touched">
+        <li *ngIf="formulario.get('cpf').getError('required')" class="alert">Esse campo é obrigatório!</li>
+      </ul>
+    </div>
 
-        <div class="rowForm">
-            <div class="inputGroup">
-                <label for="email">E-mail:</label>
-                <input id="email" type="text" placeholder="example@email.com"
-                formControlName="email"
-                [ngClass]="formulario.get('email').invalid && formulario.get('email').touched ? 'error':null">
-                <ul *ngIf="formulario.get('email').touched">
-                    <li *ngIf="formulario.get('email').getError('required')" class="alert">Esse campo é obrigatório!</li>
-                    <li *ngIf="formulario.get('email').getError('email')" class="alert">Esse email é invalido!</li>
-                </ul>
-            </div>
+    <div class="inputGroup">
+      <label for="dataNascimento">Data de Nascimento:</label>
+        <input id="dataNascimento" type="text" placeholder="00/00/0000" name="data_nascimento"
+        formControlName="data_nascimento"
+        [imask]="{mask: dateMask}"
+        [ngClass]="formulario.get('data_nascimento').invalid && formulario.get('data_nascimento').touched ? 'error':null">
+        <ul *ngIf="formulario.get('data_nascimento').touched">
+          <li *ngIf="formulario.get('data_nascimento').getError('required')" class="alert">Esse campo é obrigatório!</li>
+        </ul>
+    </div>
+  </div>
 
-            <div class="inputGroup">
-                <label for="tel">Telefone:</label>
-                <input id="tel" type="text" placeholder="(00) 0000-0000"
-                formControlName="tel"
-                [imask]="{mask: telMask}"
-                [ngClass]="formulario.get('tel').invalid && formulario.get('tel').touched ? 'error':null">
-                <ul *ngIf="formulario.get('tel').touched">
-                    <li *ngIf="formulario.get('tel').getError('required')" class="alert">Esse campo é obrigatório!</li>
-                </ul>
-            </div>
-        </div>
+  <div class="rowForm">
+    <div class="inputGroup">
+      <label for="email">E-mail:</label>
+        <input id="email" type="text" placeholder="example@email.com" name="email"
+        formControlName="email"
+        [ngClass]="formulario.get('email').invalid && formulario.get('email').touched ? 'error':null">
+        <ul *ngIf="formulario.get('email').touched">
+          <li *ngIf="formulario.get('email').getError('required')" class="alert">Esse campo é obrigatório!</li>
+          <li *ngIf="formulario.get('email').getError('email')" class="alert">Esse email é invalido!</li>
+        </ul>
+    </div>
 
-        <button class="btnSubimit" type="submit"
-        [ngClass]="formulario.valid ? 'null' : 'disabled-button'"
-        [disabled]="formulario.invalid">Cadastrar</button>
-        <div class="responseSubmit"></div>
-    </form>
-</div>
-<div>
-  <app-table [colabs]="listaColabs"></app-table>
-</div>
+    <div class="inputGroup">
+      <label for="tel">Telefone:</label>
+      <input id="tel" type="text" placeholder="(00) 0000-0000" name="telefone"
+      formControlName="telefone"
+      [imask]="{mask: telMask}"
+      [ngClass]="formulario.get('telefone').invalid && formulario.get('telefone').touched ? 'error':null">
+      <ul *ngIf="formulario.get('telefone').touched">
+        <li *ngIf="formulario.get('telefone').getError('required')" class="alert">Esse campo é obrigatório!</li>
+      </ul>
+    </div>
+  </div>
+
+  <button class="btnSubimit" type="submit"
+  [ngClass]="formulario.valid ? 'null' : 'disabled-button'"
+  [disabled]="formulario.invalid" (click)="criar()">Cadastrar</button>
+  <div class="responseSubmit"></div>
+</form>
+
+<app-table [colaboradores]="colaborador"></app-table>
+
